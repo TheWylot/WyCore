@@ -1,5 +1,6 @@
 package ir.wy.wycore;
 
+import ir.wy.wycore.Heart;
 import io.papermc.lib.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,7 @@ public class WyCore extends JavaPlugin {
     private BukkitTask saveTask;
     private boolean isTesing = false;
 
+    private Heart heart;
     private static WyCore instance;
 
     // Testing & Debug Logger
