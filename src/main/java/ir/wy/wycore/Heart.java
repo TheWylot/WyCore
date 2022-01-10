@@ -126,6 +126,5 @@ public class Heart {
         public JsonFactory getFactory() {
             return factory;
         }
-
     }
 }
