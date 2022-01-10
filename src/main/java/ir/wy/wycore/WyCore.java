@@ -18,7 +18,7 @@ import java.io.File;
 @NoArgsConstructor
 public class WyCore extends JavaPlugin {
     private BukkitTask saveTask;
-    private boolean isTesing = false;
+    private boolean isTesting = false;
 
     private Heart heart;
     private static WyCore instance;
@@ -26,7 +26,7 @@ public class WyCore extends JavaPlugin {
     // Testing & Debug Logger
     public WyCore(JavaPluginLoader loader, PluginDescriptionFile description, File dataFolder, File file) {
         super(loader, description, dataFolder, file);
-        this.isTesing = true;
+        this.isTesting = true;
         getLogger().setFilter(record -> false);
     }
 
@@ -42,7 +42,7 @@ public class WyCore extends JavaPlugin {
     public void onEnable() {
         instance = this;
 
-        if(!PaperLib.isSpigot() && !isTesing) {
+        if(!PaperLib.isSpigot() && !isTesting) {
             getLogger().warning("Use Spigot and other forks etc Paper instead of craftbukkit or sponge.");
             Bukkit.getPluginManager().disablePlugin(this);
             return;
@@ -50,10 +50,10 @@ public class WyCore extends JavaPlugin {
 
         registerListeners();
 
-        if (isTesing) return;
+        if (isTesting) return;
 
         // Saving Data
-        saveTask = Bukkit.getScheduler().runTaskAsynchronously(this, this::saveData, 0, 20 * 60 * 5);
+        saveTask = Bukkit.getScheduler().runTaskTimerAsynchronously(this, this::saveData, 0, 20 * 60 * 5);
 
         // Inventory Handler & Auto Updater
         Bukkit.getScheduler().scheduleSyncRepeatingTask(this, () -> Bukkit.getServer().getOnlinePlayers().forEach(player -> {
@@ -66,7 +66,7 @@ public class WyCore extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        if (isTesing) return;
+        if (isTesting) return;
         if (saveTask != null) saveTask.cancel();
         saveData();
         Bukkit.getOnlinePlayers().forEach(HumanEntity::closeInventory);
