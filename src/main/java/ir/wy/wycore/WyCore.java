@@ -1,5 +1,6 @@
 package ir.wy.wycore;
 
+import ir.wy.wycore.gui.*;
 import ir.wy.wycore.Heart;
 import io.papermc.lib.*;
 import lombok.Getter;
