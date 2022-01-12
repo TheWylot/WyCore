@@ -13,40 +13,6 @@
         <maven.compiler.target>16</maven.compiler.target>
     </properties>
 
-    <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>3.2.4</version>
-        <configuration>
-            <relocations>
-                <relocation>
-                    <pattern>com.cryptomorin.xseries</pattern>
-                    <!-- Be sure to change the package below -->
-                    <shadedPattern>my.plugin.utils</shadedPattern>
-                </relocation>
-            </relocations>
-            <filters>
-                <filter>
-                    <artifact>*:*</artifact>
-                    <excludes>
-                        <exclude>com/cryptomorin/xseries/XBiome*</exclude>
-                        <exclude>com/cryptomorin/xseries/NMSExtras*</exclude>
-                        <exclude>com/cryptomorin/xseries/NoteBlockMusic*</exclude>
-                        <exclude>com/cryptomorin/xseries/SkullCacheListener*</exclude>
-                    </excludes>
-                </filter>
-            </filters>
-        </configuration>
-        <executions>
-            <execution>
-                <phase>package</phase>
-                <goals>
-                    <goal>shade</goal>
-                </goals>
-            </execution>
-        </executions>
-    </plugin>
-
     <repositories>
         <repository>
             <id>papermc</id>
