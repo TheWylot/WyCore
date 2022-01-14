@@ -18,6 +18,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
+@SuppressWarnings("ALL")
 public class ItemStackUtils {
 
     private static final boolean supports = XMaterial.supports(16);
