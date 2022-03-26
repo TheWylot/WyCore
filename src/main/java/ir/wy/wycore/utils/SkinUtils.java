@@ -2,10 +2,8 @@ package ir.wy.wycore.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import ir.wy.wycore.WyCore;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
-import org.bukkit.entity.Player;
 
 import java.io.BufferedReader;
 import java.io.IOException;
