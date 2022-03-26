@@ -7,7 +7,7 @@
     <groupId>ir.wy</groupId>
     <artifactId>WyCore</artifactId>
     <packaging>pom</packaging>
-    <version>0.2</version>
+    <version>0.5</version>
     <modules>
         <module>multiversion/default</module>
     </modules>
