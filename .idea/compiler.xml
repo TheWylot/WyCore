@@ -8,10 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="multiversion" />
-        <module name="default" />
+        <module name="WyCore" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="default" target="1.8" />
       <module name="multiversion" target="1.8" />
       <module name="untitled" target="1.8" />
     </bytecodeTargetLevel>

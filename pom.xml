@@ -6,11 +6,9 @@
 
     <groupId>ir.wy</groupId>
     <artifactId>WyCore</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <version>0.5</version>
-    <modules>
-        <module>multiversion/default</module>
-    </modules>
+
 
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
@@ -126,27 +124,27 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
-            <version>2.5.0</version>
+            <version>2.13.2</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.5.0</version>
+            <version>2.13.2.1</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
-            <version>2.5.0</version>
+            <version>2.13.2</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-xml</artifactId>
-            <version>2.13.0</version>
+            <version>2.13.2</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-yaml</artifactId>
-            <version>2.13.0</version>
+            <version>2.13.2</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -173,9 +171,9 @@
         <dependency>
             <groupId>com.github.cryptomorin</groupId>
             <artifactId>XSeries</artifactId>
-            <version>8.6.0</version>
+            <version>8.7.0</version>
         </dependency>
     </dependencies>
 
-    
+
 </project>
