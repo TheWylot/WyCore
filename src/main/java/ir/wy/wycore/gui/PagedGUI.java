@@ -90,11 +90,15 @@ public abstract class PagedGUI<T> implements GUI {
 
     @Override
     public void onInventoryClick(InventoryClickEvent event) {
-        if (!isPaged()) return;
-        if (event.getSlot() == getInventory().getSize() - 7) {
-            if (page > 1) {
-                page--;
-                event.getWhoClicked().openInventory(getInventory());
+        if (isPaged()) {
+            if (event.getSlot() == getInventory().getSize() - 7) {
+                if (page > 1) {
+                    page--;
+                    event.getWhoClicked().openInventory(getInventory());
+                }
+            } else if (previousInventory != null && backButton != null) {
+                if (event.getSlot() == event.getInventory().getSize() + backButton.slot) {
+                    event.getWhoClicked().openInventory(previousInventory);
             }
         } else if (event.getSlot() == getInventory().getSize() - 3) {
             if ((event.getInventory().getSize() - 9) * page < getPageObjects().size()) {
@@ -105,4 +109,4 @@ public abstract class PagedGUI<T> implements GUI {
             event.getWhoClicked().openInventory(previousInventory);
         }
     }
-}
+}}
