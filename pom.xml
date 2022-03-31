@@ -7,7 +7,7 @@
     <groupId>ir.wy</groupId>
     <artifactId>WyCore</artifactId>
     <packaging>jar</packaging>
-    <version>0.5</version>
+    <version>0.7</version>
 
 
     <properties>
