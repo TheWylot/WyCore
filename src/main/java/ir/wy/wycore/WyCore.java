@@ -17,17 +17,20 @@ import java.io.File;
 @Getter
 @NoArgsConstructor
 public class WyCore extends JavaPlugin {
+    private static WyCore instance;
     private BukkitTask saveTask;
     private boolean isTesting = false;
-
     private Heart heart;
-    private static WyCore instance;
 
     // Testing & Debug Logger
     public WyCore(JavaPluginLoader loader, PluginDescriptionFile description, File dataFolder, File file) {
         super(loader, description, dataFolder, file);
         this.isTesting = true;
         getLogger().setFilter(record -> false);
+    }
+
+    public static WyCore getInstance() {
+        return instance;
     }
 
     @Override
@@ -38,11 +41,12 @@ public class WyCore extends JavaPlugin {
         loadConfigs();
         saveConfigs();
     }
+
     @Override
     public void onEnable() {
         instance = this;
 
-        if(!PaperLib.isSpigot() && !isTesting) {
+        if (!PaperLib.isSpigot() && !isTesting) {
             getLogger().warning("Use Spigot and other forks etc Paper instead of craftbukkit or sponge.");
             Bukkit.getPluginManager().disablePlugin(this);
             return;
@@ -80,16 +84,12 @@ public class WyCore extends JavaPlugin {
     public void registerListeners() {
     }
 
-    public void saveData(){
+    public void saveData() {
     }
 
     public void loadConfigs() {
     }
 
     public void saveConfigs() {
-    }
-
-    public static WyCore getInstance() {
-        return instance;
     }
 }
