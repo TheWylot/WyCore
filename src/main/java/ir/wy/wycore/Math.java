@@ -11,7 +11,7 @@ import java.util.NavigableMap;
 import java.util.TreeMap;
 
 /**
- * Utils: Mathematical Class
+ * Utils: Mathematical Class - Copywrite of some codes (MineAcademy)
  */
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
