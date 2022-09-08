@@ -10,7 +10,7 @@ public class Exception extends RuntimeException {
     @Getter @Setter
     private static boolean errorSavedAutomatically = true;
 
-    public Exception(Throwable t) {
+    public Exception(String t) {
         super(t);
     }
 
