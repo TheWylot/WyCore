@@ -32,6 +32,11 @@
       <option name="url" value="https://nexus.iridiumdevelopment.net/repository/maven-releases/" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="mineacademy-repo" />
+      <option name="name" value="mineacademy-repo" />
+      <option name="url" value="https://bitbucket.org/kangarko/libraries/raw/master" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Maven Central repository" />
       <option name="url" value="https://repo1.maven.org/maven2" />

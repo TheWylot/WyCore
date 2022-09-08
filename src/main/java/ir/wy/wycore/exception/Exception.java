@@ -7,7 +7,8 @@ public class Exception extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     private static boolean errorSavedAutomatically = true;
 
     public Exception(String t) {

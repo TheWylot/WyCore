@@ -1,9 +1,6 @@
 package ir.wy.wycore.bungee;
 
 public interface BungeeMessage {
-    Class<?>[] getContent();
-    String name();
-
     static BungeeMessage getByName(BungeeListener listener, String name) {
         final BungeeMessage[] actions = listener.getActions();
 
@@ -11,6 +8,10 @@ public interface BungeeMessage {
             if (action.name().equals(name))
                 return action;
 
-            return null;
+        return null;
     }
+
+    Class<?>[] getContent();
+
+    String name();
 }

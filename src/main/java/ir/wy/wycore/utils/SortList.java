@@ -12,7 +12,7 @@ public class SortList<T> extends ArrayList<T> {
     }
 
     @Override
-    public boolean add (T t) {
+    public boolean add(T t) {
         int index = Collections.binarySearch(this, t, comparator);
         if (index < 0) index = ~index;
         super.add(index, t);
