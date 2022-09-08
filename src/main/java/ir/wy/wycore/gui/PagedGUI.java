@@ -4,8 +4,6 @@ import ir.wy.wycore.Design;
 import ir.wy.wycore.Item;
 import ir.wy.wycore.utils.InventoryUtils;
 import ir.wy.wycore.utils.ItemStackUtils;
-
-
 import lombok.AllArgsConstructor;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
@@ -13,8 +11,8 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
@@ -22,7 +20,6 @@ import java.util.stream.Collectors;
 public abstract class PagedGUI<T> implements GUI {
 
 
-    private int page;
     private final int size;
     private final Design design;
     private final Item previousPage;
@@ -30,6 +27,7 @@ public abstract class PagedGUI<T> implements GUI {
     private final Inventory previousInventory;
     private final Item backButton;
     private final Map<Integer, T> items = new HashMap<>();
+    private int page;
 
     public PagedGUI(int page, int size, Design background, Item previousPage, Item nextPage) {
         this.page = page;
@@ -99,14 +97,15 @@ public abstract class PagedGUI<T> implements GUI {
             } else if (previousInventory != null && backButton != null) {
                 if (event.getSlot() == event.getInventory().getSize() + backButton.slot) {
                     event.getWhoClicked().openInventory(previousInventory);
+                }
+            } else if (event.getSlot() == getInventory().getSize() - 3) {
+                if ((event.getInventory().getSize() - 9) * page < getPageObjects().size()) {
+                    page++;
+                    event.getWhoClicked().openInventory(getInventory());
+                }
+            } else if (previousInventory != null && backButton != null && event.getSlot() == (event.getInventory().getSize() + backButton.slot)) {
+                event.getWhoClicked().openInventory(previousInventory);
             }
-        } else if (event.getSlot() == getInventory().getSize() - 3) {
-            if ((event.getInventory().getSize() - 9) * page < getPageObjects().size()) {
-                page++;
-                event.getWhoClicked().openInventory(getInventory());
-            }
-        } else if (previousInventory != null && backButton != null && event.getSlot() == (event.getInventory().getSize() + backButton.slot)) {
-            event.getWhoClicked().openInventory(previousInventory);
         }
     }
-}}
+}
