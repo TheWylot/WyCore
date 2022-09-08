@@ -7,9 +7,8 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-// Java Imports
-import java.io.IOException;
 import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Type;
 
 public class Heart {
