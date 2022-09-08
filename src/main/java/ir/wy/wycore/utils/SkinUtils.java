@@ -107,7 +107,7 @@ public class SkinUtils {
             return false;
         }
 
-        for (int i =0, len = input.length(); i < len; i++) {
+        for (int i = 0, len = input.length(); i < len; i++) {
             char c = input.charAt(i);
             if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') || (c == '_')) {
                 continue;

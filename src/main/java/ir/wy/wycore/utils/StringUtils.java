@@ -1,8 +1,8 @@
 package ir.wy.wycore.utils;
 
+import com.iridium.iridiumcolorapi.IridiumColorAPI;
 import ir.wy.wycore.DefaultFontInfo;
 import org.bukkit.ChatColor;
-import com.iridium.iridiumcolorapi.IridiumColorAPI;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 public class StringUtils {
 
     private final static int CENTER_PX = 154;
+
     public static String color(String string) {
         return IridiumColorAPI.process(string);
     }
