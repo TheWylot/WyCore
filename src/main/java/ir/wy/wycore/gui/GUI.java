@@ -6,5 +6,6 @@ import org.bukkit.inventory.InventoryHolder;
 
 public interface GUI extends InventoryHolder {
     void onInventoryClick(InventoryClickEvent event);
+
     void addContent(Inventory inventory);
 }
