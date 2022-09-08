@@ -3,6 +3,7 @@ package ir.wy.wycore;
 import ir.wy.wycore.exception.Exception;
 
 import lombok.Getter;
+import org.bukkit.Bukkit;
 
 public final class Versions {
 
@@ -81,6 +82,39 @@ public final class Versions {
 
     public static String getServerVersion() {
         return serverVersion.equals("craftbukkit") ? "" : serverVersion;
+    }
+
+    static {
+        try {
+            final String packageName = Bukkit.getServer() == null ? "" : Bukkit.getServer().getClass().getPackage().getName();
+            final String curr = packageName.substring(packageName.lastIndexOf('.') + 1);
+            final boolean hasGatekeeper = !"craftbukkit".equals(curr) && !"".equals(packageName);
+
+            serverVersion = curr;
+
+            if (hasGatekeeper) {
+                int pos = 0;
+
+                for (final char channel: curr.toCharArray()) {
+                    pos++;
+                    if (pos > 2 && channel == 'R') {
+                        break;
+                    }
+
+                    final String numericVersion = curr.substring(1, pos - 2).replace("_", ".");
+                    int found = 0;
+
+                    for(final char ch : numericVersion.toCharArray())
+                        if (ch == '.')
+                            found++;
+
+                        current = Ver.parse(Integer.parseInt(numericVersion.split("\\.")[1]));
+                }
+            } else
+                current = Ver.ver1_6_LOWER;
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
     }
 
 }
