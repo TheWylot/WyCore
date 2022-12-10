@@ -257,6 +257,19 @@
             <version>9.0.0.0</version>
         </dependency>
         <dependency>
+            <groupId>com.github.decentsoftware-eu</groupId>
+            <artifactId>decentholograms</artifactId>
+            <version>2.7.7</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.Zrips.CMILib</groupId>
+            <artifactId>CMILib</artifactId>
+            <version>2.3.7</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/CMILib1.2.3.7.jar</systemPath>
+        </dependency>
+        <dependency>
             <groupId>org.mineacademy.plugin</groupId>
             <artifactId>Multiverse-Core</artifactId>
             <version>4.3.2-SNAPSHOT-870</version>
