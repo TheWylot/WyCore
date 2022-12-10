@@ -1,4 +1,4 @@
-package ir.wy.wycore;
+package ir.wy.wycore.utils;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
  */
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public final class TimeUtil {
+public final class TimeUtils {
 
     private static final DateFormat DATE_FORMAT = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
 
@@ -74,12 +74,8 @@ public final class TimeUtil {
     }
 
     public static long toTicks(final String humanReadableTime) {
-        Valid.checkNotNull(humanReadableTime, "Time is null");
-
         long seconds = 0L;
-
         final String[] split = humanReadableTime.split(" ");
-
         if (split.length < 2)
             throw new IllegalArgumentException("Expected human readable time like '1 second', got '" + humanReadableTime + "' instead");
 
