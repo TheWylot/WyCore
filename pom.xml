@@ -150,6 +150,10 @@
             <id>janmm14-public</id>
             <url>https://repo.janmm14.de/repository/public/</url>
         </repository>
+        <repository>
+            <id>essentials-releases</id>
+            <url>https://repo.essentialsx.net/releases/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -186,6 +190,13 @@
             <version>2.6.9</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/Vulcan-2.6.9.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>net.essentialsx</groupId>
+            <artifactId>EssentialsX</artifactId>
+            <version>2.19.7</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/EssentialsX-2.19.7.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -242,53 +253,8 @@
         </dependency>
         <dependency>
             <groupId>org.mineacademy.plugin</groupId>
-            <artifactId>AuthMe</artifactId>
-            <version>5.6.0-SNAPSHOT-2530</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mineacademy.plugin</groupId>
-            <artifactId>BentoBox</artifactId>
-            <version>1.20.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mineacademy.plugin</groupId>
-            <artifactId>CitizensAPI</artifactId>
-            <version>2.0.30-b879</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mineacademy.plugin</groupId>
             <artifactId>CMI-API</artifactId>
             <version>9.0.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mineacademy.plugin</groupId>
-            <artifactId>DiscordSRV</artifactId>
-            <version>1.26.0-SNAPSHOT-0824719</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mineacademy.plugin</groupId>
-            <artifactId>EssentialsX</artifactId>
-            <version>2.20.0-SNAPSHOT-1375</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mineacademy.plugin</groupId>
-            <artifactId>Factions</artifactId>
-            <version>3.3.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mineacademy.plugin</groupId>
-            <artifactId>FactionsUUID</artifactId>
-            <version>1.6.9.5-U0.6.11-b287</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mineacademy.plugin</groupId>
-            <artifactId>MassiveCore</artifactId>
-            <version>3.3.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mineacademy.plugin</groupId>
-            <artifactId>mcMMO</artifactId>
-            <version>2.1.213</version>
         </dependency>
         <dependency>
             <groupId>org.mineacademy.plugin</groupId>
@@ -297,38 +263,8 @@
         </dependency>
         <dependency>
             <groupId>org.mineacademy.plugin</groupId>
-            <artifactId>NuVotifier</artifactId>
-            <version>2.7.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mineacademy.plugin</groupId>
             <artifactId>PlaceholderAPI</artifactId>
             <version>2.11.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mineacademy.plugin</groupId>
-            <artifactId>ProtocolLib</artifactId>
-            <version>5.0.0-SNAPSHOT-586</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mineacademy.plugin</groupId>
-            <artifactId>Residence</artifactId>
-            <version>5.0.1.6</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mineacademy.plugin</groupId>
-            <artifactId>SimpleClans</artifactId>
-            <version>2.16.2-SNAPSHOT-283</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mineacademy.plugin</groupId>
-            <artifactId>Towny</artifactId>
-            <version>0.98.1.12</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mineacademy.plugin</groupId>
-            <artifactId>TownyChat</artifactId>
-            <version>0.96</version>
         </dependency>
         <dependency>
             <groupId>org.mineacademy.plugin</groupId>
