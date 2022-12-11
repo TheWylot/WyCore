@@ -21,7 +21,7 @@ class ColoredParticle : ParticleFactory {
             return null
         }
 
-        return AvailableParticle(Particle.DustOptions(color, 1.0f))
+        return AvailableParticleColor(Particle.DustOptions(color, 1.0f))
     }
 
     private class AvailableParticleColor(
