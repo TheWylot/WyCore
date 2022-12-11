@@ -1,7 +1,8 @@
 package ir.wy.wycore;
 
 import io.papermc.lib.PaperLib;
-import ir.wy.wycore.gui.GUI;
+import ir.wy.wycore.spigot.Heart;
+import ir.wy.wycore.spigot.gui.GUI;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.bukkit.Bukkit;

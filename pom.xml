@@ -26,7 +26,7 @@
                     <relocations>
                         <relocation>
                             <pattern>dev.triumphteam.gui</pattern>
-                            <shadedPattern>ir.wy.wycore.gui</shadedPattern> <!-- Replace package here here -->
+                            <shadedPattern>ir.wy.wycore.spigot.gui</shadedPattern> <!-- Replace package here here -->
                         </relocation>
                     </relocations>
                 </configuration>

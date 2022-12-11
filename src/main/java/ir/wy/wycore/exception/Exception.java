@@ -3,6 +3,7 @@ package ir.wy.wycore.exception;
 import lombok.Getter;
 import lombok.Setter;
 
+@Deprecated
 public class Exception extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
