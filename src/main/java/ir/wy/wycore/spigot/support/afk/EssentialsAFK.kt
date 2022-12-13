@@ -1,6 +1,7 @@
 package ir.wy.wycore.spigot.support.afk
 
 import com.earth2me.essentials.Essentials
+import ir.wy.wycore.behind.support.afk.AFKSupport
 import org.bukkit.entity.Player
 import org.bukkit.plugin.java.JavaPlugin
 

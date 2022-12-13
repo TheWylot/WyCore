@@ -1,6 +1,8 @@
 package ir.wy.wycore.spigot.support.hologram
 
 import eu.decentsoftware.holograms.api.DHAPI
+import ir.wy.wycore.behind.support.hologram.Hologram
+import ir.wy.wycore.behind.support.hologram.HologramSupport
 import org.bukkit.Location
 import java.util.UUID
 

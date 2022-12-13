@@ -1,6 +1,7 @@
 package ir.wy.wycore.spigot.support.anticheat
 
 import ac.grim.grimac.events.FlagEvent;
+import ir.wy.wycore.behind.support.anticheat.AntiCheatSupport
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.EventPriority
