@@ -1,5 +1,6 @@
 package ir.wy.wycore.spigot.support.anticheat
 
+import ir.wy.wycore.behind.support.anticheat.AntiCheatSupport
 import me.vagdedes.spartan.api.PlayerViolationEvent
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
