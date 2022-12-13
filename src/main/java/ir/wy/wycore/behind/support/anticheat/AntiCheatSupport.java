@@ -1,4 +1,4 @@
-package ir.wy.wycore.spigot.support.anticheat;
+package ir.wy.wycore.behind.support.anticheat;
 
 import ir.wy.wycore.spigot.support.Support;
 import org.bukkit.entity.Player;

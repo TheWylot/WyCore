@@ -2,6 +2,8 @@ package ir.wy.wycore.spigot.support.hologram
 
 import com.Zrips.CMI.CMI
 import com.Zrips.CMI.Modules.Holograms.CMIHologram
+import ir.wy.wycore.behind.support.hologram.Hologram
+import ir.wy.wycore.behind.support.hologram.HologramSupport
 import net.Zrips.CMILib.Container.CMILocation
 import org.bukkit.Location
 import java.util.UUID

@@ -1,5 +1,6 @@
-package ir.wy.wycore.spigot.support.anticheat;
+package ir.wy.wycore.behind.support.anticheat;
 
+import ir.wy.wycore.behind.support.anticheat.AntiCheatSupport;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 

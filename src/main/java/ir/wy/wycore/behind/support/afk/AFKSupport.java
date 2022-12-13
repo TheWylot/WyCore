@@ -1,4 +1,4 @@
-package ir.wy.wycore.spigot.support.afk;
+package ir.wy.wycore.behind.support.afk;
 
 import ir.wy.wycore.spigot.support.Support;
 import org.bukkit.entity.Player;
