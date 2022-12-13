@@ -1,4 +1,4 @@
-package ir.wy.wycore.spigot.support.hologram;
+package ir.wy.wycore.behind.support.hologram;
 
 import ir.wy.wycore.spigot.support.Support;
 import org.bukkit.Location;

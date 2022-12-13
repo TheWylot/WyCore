@@ -1,5 +1,8 @@
-package ir.wy.wycore.spigot.support.hologram;
+package ir.wy.wycore.behind.support.hologram;
 
+import ir.wy.wycore.behind.support.hologram.Hologram;
+import ir.wy.wycore.behind.support.hologram.HologramSupport;
+import ir.wy.wycore.spigot.support.hologram.EmptyHologram;
 import org.bukkit.Location;
 import org.jetbrains.annotations.NotNull;
 import java.util.HashSet;

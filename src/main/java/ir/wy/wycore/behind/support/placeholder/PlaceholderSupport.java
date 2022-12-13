@@ -1,4 +1,4 @@
-package ir.wy.wycore.spigot.support.placeholder;
+package ir.wy.wycore.behind.support.placeholder;
 
 import ir.wy.wycore.spigot.support.Support;
 import org.bukkit.entity.Player;
