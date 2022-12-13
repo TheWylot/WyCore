@@ -11,7 +11,7 @@ import java.util.UUID
 class GrimAntiCheat : AntiCheatSupport, Listener{
     private val exempt: MutableSet<UUID> = HashSet()
     override fun getPluginName(): String {
-        return "Matrix"
+        return "Grim"
     }
 
     override fun exempt(player: Player) {
