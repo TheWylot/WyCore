@@ -1,8 +1,5 @@
 package ir.wy.wycore.behind.support.hologram;
 
-import ir.wy.wycore.behind.support.hologram.Hologram;
-import ir.wy.wycore.behind.support.hologram.HologramSupport;
-import ir.wy.wycore.spigot.support.hologram.EmptyHologram;
 import org.bukkit.Location;
 import org.jetbrains.annotations.NotNull;
 import java.util.HashSet;
@@ -18,12 +15,13 @@ public final class HologramManager {
         REGISTERED.add(support);
     }
 
-    private static Hologram createHologram(@NotNull final Location location, @NotNull final List<String> contents) {
-        for (HologramSupport support : REGISTERED) {
-            return support.createHologram(location, contents);
-        }
-        return new EmptyHologram();
-    }
+    //
+    // private static Hologram createHologram(@NotNull final Location location, @NotNull final List<String> contents) {
+         // for (HologramSupport support : REGISTERED) {
+        //    return support.createHologram(location, contents);
+      //  }
+     //   return new EmptyHologram();
+    // }
 
     private HologramManager() {
         throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");

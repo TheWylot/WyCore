@@ -296,11 +296,6 @@
             <artifactId>WorldEdit</artifactId>
             <version>7.2.10</version>
         </dependency>
-        <dependency>
-            <groupId>org.mineacademy.plugin</groupId>
-            <artifactId>WorldGuard</artifactId>
-            <version>7.0.7</version>
-        </dependency>
 
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
