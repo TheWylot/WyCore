@@ -1,7 +1,6 @@
 package ir.wy.wycore;
 
 import io.papermc.lib.PaperLib;
-import ir.wy.wycore.spigot.Heart;
 import ir.wy.wycore.spigot.gui.GUI;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,7 +20,6 @@ public class WyCore extends JavaPlugin {
     private static WyCore instance;
     private BukkitTask saveTask;
     private boolean isTesting = false;
-    private Heart heart;
 
     // Testing & Debug Logger
     public WyCore(JavaPluginLoader loader, PluginDescriptionFile description, File dataFolder, File file) {
@@ -38,7 +36,6 @@ public class WyCore extends JavaPlugin {
     public void onLoad() {
         getDataFolder().mkdirs();
 
-        this.heart = new Heart(Heart.HeartType.YAML, this);
         loadConfigs();
         saveConfigs();
     }
