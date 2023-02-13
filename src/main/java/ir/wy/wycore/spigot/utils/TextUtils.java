@@ -27,7 +27,8 @@ public class TextUtils {
         try {
             supportedCharsets.add(Charset.forName("windows-1253"));
             supportedCharsets.add(Charset.forName("ISO-8859-7"));
-        } catch (Exception ignore) {}
+        } catch (Exception ignore) {
+        }
 
         supportedCharsets.add(StandardCharsets.US_ASCII);
     }
@@ -63,6 +64,7 @@ public class TextUtils {
     public static List<String> wrap(String line) {
         return wrap(null, line);
     }
+
     public static List<String> wrap(String color, String line) {
         if (color != null) {
             color = "&" + color;

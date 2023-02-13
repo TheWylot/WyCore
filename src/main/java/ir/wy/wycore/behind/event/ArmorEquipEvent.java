@@ -14,7 +14,8 @@ public class ArmorEquipEvent extends PlayerEvent {
         super(player);
     }
 
-    @Override @NotNull
+    @Override
+    @NotNull
     public HandlerList getHandlers() {
         return HANDLERS;
     }

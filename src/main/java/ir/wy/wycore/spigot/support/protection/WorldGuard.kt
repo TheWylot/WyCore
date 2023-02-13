@@ -74,7 +74,7 @@ class WorldGuard : ProtectionSupport {
         val localPlayer: LocalPlayer = WorldGuardPlugin.inst().wrapPlayer(player)
         val container: RegionContainer = WorldGuard.getInstance().platform.regionContainer
         val query: RegionQuery = container.createQuery()
-        val flag = when(victim) {
+        val flag = when (victim) {
             is Player -> Flags.PVP
             is Monster -> Flags.MOB_DAMAGE
             is Animals -> Flags.DAMAGE_ANIMALS

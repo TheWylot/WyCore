@@ -27,10 +27,12 @@ class DeluxeCombat : ProtectionSupport {
 
     override fun canInjure(player: Player, victim: LivingEntity): Boolean {
         val api = DeluxeCombatAPI()
-        return when(victim) {
+        return when (victim) {
             is Player -> {
                 if (api.hasProtection(player) || !api.hasPvPEnabled(player)) false
-                else !api.hasProtection(victim) && api.hasPvPEnabled(victim) || api.isInCombat(victim)}
+                else !api.hasProtection(victim) && api.hasPvPEnabled(victim) || api.isInCombat(victim)
+            }
+
             else -> true
         }
     }

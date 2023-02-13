@@ -8,7 +8,7 @@ import org.bukkit.event.EventPriority
 import org.bukkit.event.Listener
 import java.util.UUID
 
-class GrimAntiCheat : AntiCheatSupport, Listener{
+class GrimAntiCheat : AntiCheatSupport, Listener {
     private val exempt: MutableSet<UUID> = HashSet()
     override fun getPluginName(): String {
         return "Grim"
