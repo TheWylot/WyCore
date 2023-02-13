@@ -1,6 +1,6 @@
 package ir.wy.wycore.spigot.support.protection
 
-import ir.wy.wycore.behind.support.protection.ProtectionSupport;
+import ir.wy.wycore.behind.support.protection.ProtectionSupport
 
 import nl.marido.deluxecombat.api.DeluxeCombatAPI
 import org.bukkit.Location
@@ -30,7 +30,7 @@ class DeluxeCombat : ProtectionSupport {
         return when(victim) {
             is Player -> {
                 if (api.hasProtection(player) || !api.hasPvPEnabled(player)) false
-                else (!api.hasProtection(victim) && api.hasPvPEnabled(victim) || api.isInCombat(victim))}
+                else !api.hasProtection(victim) && api.hasPvPEnabled(victim) || api.isInCombat(victim)}
             else -> true
         }
     }
