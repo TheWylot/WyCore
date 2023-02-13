@@ -5,6 +5,7 @@ import org.bukkit.event.HandlerList;
 import org.bukkit.event.player.PlayerEvent;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
+
 import java.util.List;
 
 public class ArmorChangeEvent extends PlayerEvent {
@@ -19,7 +20,8 @@ public class ArmorChangeEvent extends PlayerEvent {
         this.after = after;
     }
 
-    @Override @NotNull
+    @Override
+    @NotNull
     public HandlerList getHandlers() {
         return HANDLERS;
     }

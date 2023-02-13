@@ -1,6 +1,7 @@
 package ir.wy.wycore.spigot.chat.color;
 
 import org.bukkit.ChatColor;
+
 import java.util.HashMap;
 import java.util.Map;
 
