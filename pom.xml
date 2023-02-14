@@ -7,7 +7,7 @@
     <groupId>ir.wy</groupId>
     <artifactId>WyCore</artifactId>
     <packaging>jar</packaging>
-    <version>2.0.2</version>
+    <version>2.0.4</version>
 
 
     <properties>
@@ -143,6 +143,10 @@
             <url>https://nexus.iridiumdevelopment.net/repository/maven-releases/</url>
         </repository>
         <repository>
+            <id>janmm14-intave</id>
+            <url>https://repo.janmm14.de/repository/intave/</url>
+        </repository>
+        <repository>
             <id>local-repo</id>
             <url>file:///${project.basedir}/libs/</url>
         </repository>
@@ -190,6 +194,12 @@
             <version>2.6.9</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/Vulcan-2.6.9.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>de.jpx3.intave.access</groupId>
+            <artifactId>intave-access</artifactId>
+            <version>14.4.2</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>net.essentialsx</groupId>
@@ -334,5 +344,6 @@
             <artifactId>kotlin-stdlib-jdk8</artifactId>
             <version>${kotlin.version}</version>
         </dependency>
+
     </dependencies>
 </project>
