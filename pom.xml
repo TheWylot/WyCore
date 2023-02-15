@@ -173,8 +173,9 @@
         <dependency>
             <groupId>com.bgsoftware</groupId>
             <artifactId>SuperiorSkyblockAPI</artifactId>
-            <version>latest</version>
-            <scope>provided</scope>
+            <version>provided</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/SuperiorSkyblock2API.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
