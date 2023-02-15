@@ -1,4 +1,4 @@
-package ir.wy.wycore.behind.proxy
+package ir.wy.wycore.proxy.behind
 
 import org.bukkit.Bukkit
 import java.util.*

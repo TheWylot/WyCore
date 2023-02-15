@@ -1,4 +1,4 @@
-package ir.wy.wycore.behind.proxy.errors;
+package ir.wy.wycore.proxy.behind.errors;
 
 import org.jetbrains.annotations.NotNull;
 
