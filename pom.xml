@@ -162,6 +162,10 @@
             <id>bg-repo</id>
             <url>https://repo.bg-software.com/repository/api/</url>
         </repository>
+        <repository>
+            <id>sk89q-repo</id>
+            <url>https://maven.enginehub.org/repo/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -204,7 +208,7 @@
             <artifactId>VulcanAPI</artifactId>
             <version>2.6.9</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/Vulcan-2.6.9.jar</systemPath>
+            <systemPath>${project.basedir}/libs/VulcanAPI.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>de.jpx3.intave.access</groupId>
@@ -264,7 +268,7 @@
         </dependency>
         <dependency>
             <groupId>me.filoghost.holographicdisplays</groupId>
-            <artifactId>holographicdisplays</artifactId>
+            <artifactId>holographicdisplays-api</artifactId>
             <version>3.0.0</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/HolographicDisplays.jar</systemPath>
@@ -295,7 +299,7 @@
             <artifactId>CMILib</artifactId>
             <version>2.3.7</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/CMILib1.2.3.7.jar</systemPath>
+            <systemPath>${project.basedir}/libs/CMILib1.2.4.5.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.mineacademy.plugin</groupId>
@@ -322,28 +326,14 @@
             <artifactId>worldguard-bukkit</artifactId>
             <version>PROVIDED</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/WorldGuard-7.1.0.jar</systemPath>
+            <systemPath>${project.basedir}/libs/worldguard-core.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>ir.wy.deluxecombat</groupId>
             <artifactId>deluxecombat-api</artifactId>
             <version>PROVIDED</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/DeluxeCombat-API-1.0.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>com.sk89q.worldguard</groupId>
-            <artifactId>worldguard-core</artifactId>
-            <version>7.0.5</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/libs/WorldGuard-API.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>fr.neatmonster</groupId>
-            <artifactId>NoCheatPlus</artifactId>
-            <version>7.0.5</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/libs/NoCheatPlus.jar</systemPath>
+            <systemPath>${project.basedir}/libs/DeluxeCombatAPI.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>world.bentobox</groupId>
