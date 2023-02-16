@@ -323,10 +323,17 @@
         </dependency>
         <dependency>
             <groupId>com.sk89q.worldguard</groupId>
-            <artifactId>worldguard-bukkit</artifactId>
+            <artifactId>worldguard-core</artifactId>
             <version>PROVIDED</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/worldguard-core.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.sk89q.worldguard</groupId>
+            <artifactId>worldguard-bukkit</artifactId>
+            <version>PROVIDED</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/worldguard-bukkit.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>ir.wy.deluxecombat</groupId>
@@ -357,6 +364,11 @@
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib-jdk8</artifactId>
             <version>${kotlin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.5</version>
         </dependency>
 
     </dependencies>
