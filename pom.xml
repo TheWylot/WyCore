@@ -7,7 +7,7 @@
     <groupId>ir.wy</groupId>
     <artifactId>WyCore</artifactId>
     <packaging>jar</packaging>
-    <version>2.0.8</version>
+    <version>2.0.9</version>
 
 
     <properties>
@@ -209,6 +209,12 @@
             <version>2.6.9</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/VulcanAPI.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.github.angeschossen</groupId>
+            <artifactId>LandsAPI</artifactId>
+            <version>6.28.10</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>de.jpx3.intave.access</groupId>
