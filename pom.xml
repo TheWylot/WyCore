@@ -28,6 +28,10 @@
                             <pattern>dev.triumphteam.gui</pattern>
                             <shadedPattern>ir.wy.wycore.spigot.gui</shadedPattern> <!-- Replace package here here -->
                         </relocation>
+                        <relocation>
+                            <pattern>com.github.cryptomorin.xseries</pattern>
+                            <shadedPattern>ir.wy.wycore.xseries</shadedPattern> <!-- Replace package here here -->
+                        </relocation>
                     </relocations>
                 </configuration>
                 <executions>
