@@ -1,8 +1,10 @@
 package ir.wy.wycore.behind;
 
+import ir.wy.wycore.behind.entity.ai.EntityController;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.Mob;
 import org.jetbrains.annotations.NotNull;
 
 
@@ -14,6 +16,8 @@ public interface WyBase {
     static WyBase get() {
         return WyBase.get();
     }
+
+    <T extends Mob> EntityController<T> createEntityController(T entity);
 
     final class Instance {
 
