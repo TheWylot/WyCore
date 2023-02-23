@@ -217,7 +217,7 @@
         <dependency>
             <groupId>com.github.angeschossen</groupId>
             <artifactId>LandsAPI</artifactId>
-            <version>6.28.10</version>
+            <version>6.28.11</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -298,7 +298,7 @@
         <dependency>
             <groupId>com.github.cryptomorin</groupId>
             <artifactId>XSeries</artifactId>
-            <version>9.2.0</version>
+            <version>9.3.0</version>
         </dependency>
         <dependency>
             <groupId>org.mineacademy.plugin</groupId>
