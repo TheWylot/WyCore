@@ -8,7 +8,7 @@ import lombok.AllArgsConstructor;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 
-@AllArgsConstructor
+@AllArgsConstructor @Deprecated(since = "2.0.0")
 public abstract class BackGUI implements GUI {
     private final Design background;
     private final Inventory previousInventory;
