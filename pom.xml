@@ -222,6 +222,13 @@
             <systemPath>${project.basedir}/libs/lands-api-6.28.11.jar</systemPath>
         </dependency>
         <dependency>
+            <groupId>com.github.angeschossen</groupId>
+            <artifactId>PluginFrameworkAPI</artifactId>
+            <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/PluginFrameworkAPI.jar</systemPath>
+        </dependency>
+        <dependency>
             <groupId>de.jpx3.intave.access</groupId>
             <artifactId>intave-access</artifactId>
             <version>14.4.2</version>
