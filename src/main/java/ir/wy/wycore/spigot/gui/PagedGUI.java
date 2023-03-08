@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
-@AllArgsConstructor
+@AllArgsConstructor @Deprecated(since = "2.0.0")
 public abstract class PagedGUI<T> implements GUI {
 
 
