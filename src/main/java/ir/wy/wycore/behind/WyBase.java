@@ -1,6 +1,7 @@
 package ir.wy.wycore.behind;
 
 import ir.wy.wycore.behind.entity.ai.EntityController;
+import ir.wy.wycore.behind.gui.menu.Menu;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
@@ -18,6 +19,8 @@ public interface WyBase {
     }
 
     <T extends Mob> EntityController<T> createEntityController(T entity);
+
+    Menu blendMenuState(Menu page, Menu menu);
 
     final class Instance {
 
