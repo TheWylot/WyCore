@@ -23,6 +23,7 @@ public class WyCore extends JavaPlugin {
     private static WyCore instance;
     private BukkitTask saveTask;
     private boolean isTesting = false;
+    public int bStatsId;
 
     // Testing & Debug Logger
     public WyCore(JavaPluginLoader loader, PluginDescriptionFile description, File dataFolder, File file) {

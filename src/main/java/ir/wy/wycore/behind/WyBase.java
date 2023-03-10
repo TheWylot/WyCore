@@ -2,10 +2,12 @@ package ir.wy.wycore.behind;
 
 import ir.wy.wycore.behind.entity.ai.EntityController;
 import ir.wy.wycore.behind.gui.menu.Menu;
+import ir.wy.wycore.behind.packet.Packet;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Mob;
+import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 
@@ -35,4 +37,7 @@ public interface WyBase {
             Instance.wybase = wybase;
         }
     }
+
+    void sendPacket(@NotNull Player player,
+                    @NotNull Packet packet);
 }
