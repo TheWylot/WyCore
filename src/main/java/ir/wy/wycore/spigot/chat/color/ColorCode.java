@@ -29,22 +29,22 @@ public enum ColorCode {
     ITALIC('o', ChatColor.ITALIC, false),
     RESET('r', ChatColor.RESET, false);
 
-    private final char code;
-    private final ChatColor chatColor;
-    private final boolean isColor;
-
     private static final Map<Character, ColorCode> BY_CHAR = new HashMap<>();
-
-    ColorCode(char code, ChatColor chatColor, boolean isColor) {
-        this.code = code;
-        this.chatColor = chatColor;
-        this.isColor = isColor;
-    }
 
     static {
         for (ColorCode color : values()) {
             BY_CHAR.put(color.code, color);
         }
+    }
+
+    private final char code;
+    private final ChatColor chatColor;
+    private final boolean isColor;
+
+    ColorCode(char code, ChatColor chatColor, boolean isColor) {
+        this.code = code;
+        this.chatColor = chatColor;
+        this.isColor = isColor;
     }
 
     public static ColorCode getByChar(char code) {
