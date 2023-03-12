@@ -13,6 +13,7 @@ open class Versions private constructor() {
             Bukkit.getServer().javaClass.getPackage().name.split("\\.".toRegex()).dropLastWhile { it.isEmpty() }
                 .toTypedArray()[3]
         val SUPPORTED_VERSIONS = Arrays.asList( // i dont like to support other nms versions, maybe 1.16.5 at least
+            "v1_16_R3",
             "v1_17_R1",
             "v1_18_R1",
             "v1_18_R2",
