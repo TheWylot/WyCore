@@ -1,7 +1,6 @@
 package ir.wy.wycore.spigot.utils;
 
 import org.bukkit.potion.PotionData;
-
 import org.jetbrains.annotations.NotNull;
 
 public final class PotionUtils {
