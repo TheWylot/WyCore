@@ -1,6 +1,6 @@
 package ir.wy.wycore.spigot.support.protection.skyblockcore
 
-import ir.wy.wycore.behind.support.protection.ProtectionSupport;
+import ir.wy.wycore.behind.support.protection.ProtectionSupport
 import org.bukkit.Location
 import org.bukkit.World
 import org.bukkit.block.Block
@@ -39,6 +39,7 @@ class BentoBox : ProtectionSupport {
                     }
                 )
             }
+
             is Monster -> island.isAllowed(User.getInstance(player), Flags.HURT_MONSTERS)
             else -> island.isAllowed(User.getInstance(player), Flags.HURT_ANIMALS)
         }

@@ -1,7 +1,7 @@
 package ir.wy.wycore.spigot.support.protection.skyblockcore
 
-import ir.wy.wycore.behind.support.protection.ProtectionSupport
 import com.songoda.skyblock.SkyBlock
+import ir.wy.wycore.behind.support.protection.ProtectionSupport
 import org.bukkit.Location
 import org.bukkit.block.Block
 import org.bukkit.entity.LivingEntity
