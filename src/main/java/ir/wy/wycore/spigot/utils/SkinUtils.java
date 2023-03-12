@@ -61,7 +61,7 @@ public class SkinUtils {
             cache.put(uuid, steveSkin);
             CompletableFuture.runAsync(() -> {
                 try {
-                    String signature = getURLContent("https://sessionserver.mojang.com/session/minecraft/profile/" + uuid.toString());
+                    String signature = getURLContent("https://sessionserver.mojang.com/session/minecraft/profile/" + uuid);
                     if (!signature.isEmpty()) {
                         JsonObject profileJsonObject = gson.fromJson(signature, JsonObject.class);
                         if (profileJsonObject.has("properties")) {
