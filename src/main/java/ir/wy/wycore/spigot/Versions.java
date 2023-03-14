@@ -4,6 +4,8 @@ import ir.wy.wycore.exception.Exception;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 
+
+@Deprecated(since = "v2.0.10")
 public final class Versions {
 
     private static String serverVersion;
