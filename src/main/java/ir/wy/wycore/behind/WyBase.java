@@ -1,5 +1,6 @@
 package ir.wy.wycore.behind;
 
+import ir.wy.wycore.WyCore;
 import ir.wy.wycore.behind.entity.ai.EntityController;
 import ir.wy.wycore.behind.gui.menu.Menu;
 import ir.wy.wycore.behind.packet.Packet;
@@ -23,6 +24,9 @@ public interface WyBase {
     <T extends Mob> EntityController<T> createEntityController(T entity);
 
     Menu blendMenuState(Menu page, Menu menu);
+
+    @NotNull
+    WyCore getWyCorePlugin();
 
     final class Instance {
 
