@@ -1,5 +1,6 @@
 package ir.wy.wycore.behind.support.protection;
 
+import ir.wy.wycore.spigot.support.SupportRegistery;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.entity.LivingEntity;
@@ -11,86 +12,40 @@ import java.util.Set;
 
 public final class ProtectionManager {
 
-    private static final Set<ProtectionSupport> REGISTERED = new HashSet<>();
+    private static final SupportRegistery<ProtectionSupport> REGISTERY = new SupportRegistery<>();
 
-    /**
-     * Register a new AntiGrief/Land Management integration.
-     *
-     * @param antigrief The integration to register.
-     */
     public static void register(@NotNull final ProtectionSupport antigrief) {
-        REGISTERED.removeIf(it -> it.getPluginName().equalsIgnoreCase(antigrief.getPluginName()));
-        REGISTERED.add(antigrief);
+        REGISTERY.register(antigrief);
     }
 
-    /**
-     * Unregister an AntiGrief/Land Management integration.
-     *
-     * @param antigrief The integration to unregister.
-     */
     public static void unregister(@NotNull final ProtectionSupport antigrief) {
-        REGISTERED.removeIf(it -> it.getPluginName().equalsIgnoreCase(antigrief.getPluginName()));
-        REGISTERED.remove(antigrief);
+        REGISTERY.remove(antigrief);
     }
 
-    /**
-     * Can player pickup item.
-     *
-     * @param player   The player.
-     * @param location The location.
-     * @return If player can pick up item.
-     */
     public static boolean canPickupItem(@NotNull final Player player,
                                         @NotNull final Location location) {
-        return REGISTERED.stream().allMatch(antigriefIntegration -> antigriefIntegration.canPickupItem(player, location));
+        return REGISTERY.allSafely(integration -> integration.canPickupItem(player, location));
     }
 
-    /**
-     * Can player break block.
-     *
-     * @param player The player.
-     * @param block  The block.
-     * @return If player can break block.
-     */
     public static boolean canBreakBlock(@NotNull final Player player,
                                         @NotNull final Block block) {
-        return REGISTERED.stream().allMatch(antigriefIntegration -> antigriefIntegration.canBreakBlock(player, block));
+        return REGISTERY.allSafely(integration -> integration.canBreakBlock(player, block));
     }
 
-    /**
-     * Can player create explosion at location.
-     *
-     * @param player   The player.
-     * @param location The location.
-     * @return If player can create explosion.
-     */
     public static boolean canCreateExplosion(@NotNull final Player player,
                                              @NotNull final Location location) {
-        return REGISTERED.stream().allMatch(antigriefIntegration -> antigriefIntegration.canCreateExplosion(player, location));
+        return REGISTERY.allSafely(integration -> integration.canCreateExplosion(player, location));
     }
 
-    /**
-     * Can player place block.
-     *
-     * @param player The player.
-     * @param block  The block.
-     * @return If player can place block.
-     */
     public static boolean canPlaceBlock(@NotNull final Player player,
                                         @NotNull final Block block) {
-        return REGISTERED.stream().allMatch(antigriefIntegration -> antigriefIntegration.canPlaceBlock(player, block));
+        return REGISTERY.allSafely(integration -> integration.canPlaceBlock(player, block));
     }
 
-    /**
-     * Can player injure living entity.
-     *
-     * @param player The player.
-     * @param victim The victim.
-     * @return If player can injure.
-     */
+
     public static boolean canInjure(@NotNull final Player player,
                                     @NotNull final LivingEntity victim) {
-        return REGISTERED.stream().allMatch(antigriefIntegration -> antigriefIntegration.canInjure(player, victim));
+        return REGISTERY.allSafely(integration -> integration.canInjure(player, victim));
     }
 
     private ProtectionManager() {
