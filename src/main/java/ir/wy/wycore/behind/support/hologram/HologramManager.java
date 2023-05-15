@@ -1,5 +1,6 @@
 package ir.wy.wycore.behind.support.hologram;
 
+import ir.wy.wycore.spigot.support.SupportRegistery;
 import org.bukkit.Location;
 import org.jetbrains.annotations.NotNull;
 
@@ -9,20 +10,14 @@ import java.util.Set;
 
 public final class HologramManager {
 
+    private static final SupportRegistery<HologramSupport> REGISTERY = new SupportRegistery<>();
+
+    @Deprecated
     private static final Set<HologramSupport> REGISTERED = new HashSet<>();
 
-    private static void register(@NotNull final HologramSupport support) {
-        REGISTERED.removeIf(it -> it.getPluginName().equalsIgnoreCase(support.getPluginName()));
-        REGISTERED.add(support);
+    private static void register(@NotNull final HologramSupport Support) {
+        REGISTERY.register(Support);
     }
-
-    //
-    // private static Hologram createHologram(@NotNull final Location location, @NotNull final List<String> contents) {
-    // for (HologramSupport support : REGISTERED) {
-    //    return support.createHologram(location, contents);
-    //  }
-    //   return new EmptyHologram();
-    // }
 
     private HologramManager() {
         throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
