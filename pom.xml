@@ -181,7 +181,7 @@
         <dependency>
             <groupId>com.bgsoftware</groupId>
             <artifactId>SuperiorSkyblockAPI</artifactId>
-            <version>2023.2</version>
+            <version>2023.3</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/SuperiorSkyblock2API.jar</systemPath>
         </dependency>
